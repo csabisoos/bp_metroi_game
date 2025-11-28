@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BP Metrói - Játékszabály</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <h1>Játékszabály</h1>
+
+  <h2>A Játék Célja</h2>
+  <p>4 fordulón keresztül (M1, M2, M3, M4) kell metróvonalakat építened. Minden fordulóban 8 kártyát használhatsz fel. A pontszámod a vonalaid által érintett kerületek, állomások és a Duna-átkelések alapján dől el.</p>
+
+  <h2>A Játékmenet</h2>
+  <ol>
+    <li>A játék az M1-es vonallal kezdődik a kijelölt kezdőponton.</li>
+    <li>Kattints a <strong>"Kártyahúzás"</strong> gombra. Ekkor kapsz egy állomás-kártyát (pl. 'A', 'B', 'C', 'D' vagy 'Joker' [?]).</li>
+    <li>Most két lehetőséged van:
+      <ul>
+        <li><strong>Építesz:</strong> Kattints egy olyan állomásra, ami megfelel a kártyád típusának (a Joker bármire jó).</li>
+        <li><strong>Passzolsz:</strong> Ha nem tudsz vagy nem akarsz építeni, kattints a <strong>"Passz"</strong> gombra. Ezzel eldobod a kártyát, és húzhatsz újat.</li>
+      </ul>
+    </li>
+    <li>Miután 8-szor húztál kártyát (és építettél vagy passzoltál), a forduló véget ér. A játék kiszámolja a forduló pontszámod, és elindul a következő metróvonal.</li>
+    <li>Miután a 4. forduló is véget ér, a játék kiszámolja a végső pontszámodat, és elmenti az eredményt.</li>
+  </ol>
+
+  <h2>Építési Szabályok</h2>
+  <p>Egy szakaszt csak akkor építhetsz meg, ha az <strong>minden</strong> alábbi szabálynak megfelel:</p>
+  <ul>
+    <li>A szaknak az aktuális vonalad utolsó megállójából kell kiindulnia.</li>
+    <li>A célállomás típusa meg kell egyezzen a húzott kártya típusával (kivéve Joker).</li>
+    <li>A szakasz csak <strong>vízszintesen, függőlegesen vagy 45 fokos átlóban</strong> haladhat.</li>
+    <li>A vonal <strong>nem kanyarodhat vissza</strong> önmagába (nem hozhatsz létre hurkot).</li>
+    <li>A szakasz <strong>nem haladhat át</strong> egy harmadik, köztes állomáson.</li>
+    <li>A szakasz <strong>nem keresztezhet</strong> egyetlen már meglévő szakaszt sem.</li>
+    <li><strong>Nem építhetsz párhuzamos szakaszt</strong> (két állomás között csak egyetlen vonal mehet).</li>
+  </ul>
+
+  <h2>Pontozás</h2>
+  <p>A pontszámítás két részből áll:</p>
+  
+  <h3>1. Forduló Pontozás (FP)</h3>
+  <p>Minden forduló végén kapsz pontot: <code>FP = (PK x PM) + PD</code></p>
+  <ul>
+    <li><strong>PK:</strong> Hány <strong>különböző kerületet</strong> érintett az adott vonalad.</li>
+    <li><strong>PM:</strong> A <strong>legtöbb állomás</strong>, amit egyetlen kerületen belül érintettél.</li>
+    <li><strong>PD:</strong> Hányszor <strong>keltél át a Dunán</strong> (Buda és Pest között).</li>
+  </ul>
+
+  <h3>2. Játék Végi Pontozás</h3>
+  <p>A játék végén a végső pontszámod: <code>Összpontszám = Sum(FP) + PP + Csomópontok</code></p>
+  <ul>
+    <li><strong>Sum(FP):</strong> A 4 fordulóban szerzett FP pontjaid összege.</li>
+    <li><strong>PP:</strong> Pontok a <strong>pályaudvarok</strong> első érintéséért.</li>
+    <li><strong>Csomópontok:</strong> +2 pont (P2), +5 pont (P3), +9 pont (P4).</li>
+  </ul>
+
+  <br>
+  <a href="index.html" class="button-link">Vissza a Főmenübe</a>
+
+</body>
+</html>

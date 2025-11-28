@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BP Metrói - Játék</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div id="player-info">Játékos: <span id="player-name-display"></span></div>
+    <div id="timer-display">Idő: 0s</div>
+  </header>
+  
+  <main id="game-board-container">
+    <svg id="line-canvas" width="600" height="600"></svg>
+    </main>
+
+  <div id="controls">
+    <button id="action-button">Kártyahúzás</button>
+    
+    <div id="current-card-display">
+      <span>Aktuális kártya:</span>
+      <div id="card-value">-</div>
+    </div>
+    
+    <div id="current-line-display">Aktuális vonal: -</div>
+    <div id="pp-score-display">Pályaudvarok (PP): 0</div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
